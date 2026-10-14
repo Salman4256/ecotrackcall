@@ -324,5 +324,18 @@ Creates an optimized, minified bundle in `frontend/dist/`.
 
 ---
 
+## ☁️ Deployment to Vercel
+
+EcoTrack is pre-configured for unified full-stack hosting on **Vercel** via serverless functions and static edge caching.
+
+1. Push your repository to GitHub.
+2. In [Vercel Dashboard](https://vercel.com), click **Add New...** → **Project** and import your repo.
+3. Configure the required Environment Variables (`SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `GROQ_API_KEY`, `GROQ_MODEL`, `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`).
+4. Click **Deploy**.
+
+For detailed step-by-step instructions and CLI deployment options, see [VERCEL_DEPLOYMENT.md](file:///e:/ecotrackcall/ECOTRACK/VERCEL_DEPLOYMENT.md).
+
+---
+
 ## 📄 License
 This project is developed for educational and academic evaluation as a Final Year Computer Science Engineering capstone project.

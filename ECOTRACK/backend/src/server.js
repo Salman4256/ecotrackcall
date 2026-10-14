@@ -43,6 +43,10 @@ app.use(
       if (env.isDev && /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)) {
         return callback(null, true);
       }
+      // Allow any Vercel deployment URL
+      if (/^https:\/\/.*\.vercel\.app$/.test(origin)) {
+        return callback(null, true);
+      }
       return callback(new Error(`CORS blocked for origin: ${origin}`));
     },
     credentials: true,
@@ -66,7 +70,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // ── Rate Limiting ────────────────────────────────────────────
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: env.isDev ? 1000 : 200, // Generous limit in dev to prevent blocking tests
+  max: env.isDev ? 1000 : 300, // Generous limit
   standardHeaders: true,
   legacyHeaders: false,
   message: {
@@ -102,9 +106,10 @@ app.get('/health', (req, res) => {
   });
 });
 
-// ── API Routes (Mounted on both /api/v1 and /api for compatibility) ──
+// ── API Routes (Mounted on /api/v1, /api, and root / for serverless compatibility) ──
 app.use('/api/v1', apiRoutes);
 app.use('/api', apiRoutes);
+app.use('/', apiRoutes);
 
 // ── 404 Handler ──────────────────────────────────────────────
 app.use((req, res) => {
@@ -118,39 +123,41 @@ app.use((req, res) => {
 app.use(errorHandler);
 
 // ── Server Startup ───────────────────────────────────────────
-const server = app.listen(env.port, '0.0.0.0', () => {
-  console.log(`=======================================================`);
-  console.log(`🌱 EcoTrack Backend running in [${env.nodeEnv}] mode`);
-  console.log(`🚀 Server listening on http://localhost:${env.port} (0.0.0.0:${env.port})`);
-  console.log(`🛡️  CORS allowed for: ${allowedOrigins.join(', ')}`);
-  console.log(`🤖 Groq Model configured: ${env.groq.model}`);
-  console.log(`=======================================================`);
-});
-
-// ── Graceful Shutdown ────────────────────────────────────────
-const handleShutdown = (signal) => {
-  console.log(`\n[server] Received ${signal}, shutting down gracefully...`);
-  server.close(() => {
-    console.log('[server] Closed active HTTP connections. Process exiting.');
-    process.exit(0);
+if (require.main === module) {
+  const server = app.listen(env.port, '0.0.0.0', () => {
+    console.log(`=======================================================`);
+    console.log(`🌱 EcoTrack Backend running in [${env.nodeEnv}] mode`);
+    console.log(`🚀 Server listening on http://localhost:${env.port} (0.0.0.0:${env.port})`);
+    console.log(`🛡️  CORS allowed for: ${allowedOrigins.join(', ')}`);
+    console.log(`🤖 Groq Model configured: ${env.groq.model}`);
+    console.log(`=======================================================`);
   });
-  // Force shutdown after 5s if still hanging
-  setTimeout(() => {
-    console.error('[server] Forcefully terminating.');
+
+  // ── Graceful Shutdown ────────────────────────────────────────
+  const handleShutdown = (signal) => {
+    console.log(`\n[server] Received ${signal}, shutting down gracefully...`);
+    server.close(() => {
+      console.log('[server] Closed active HTTP connections. Process exiting.');
+      process.exit(0);
+    });
+    // Force shutdown after 5s if still hanging
+    setTimeout(() => {
+      console.error('[server] Forcefully terminating.');
+      process.exit(1);
+    }, 5000);
+  };
+
+  process.on('SIGTERM', () => handleShutdown('SIGTERM'));
+  process.on('SIGINT', () => handleShutdown('SIGINT'));
+
+  process.on('unhandledRejection', (reason, promise) => {
+    console.error('[server] Unhandled Promise Rejection:', reason);
+  });
+
+  process.on('uncaughtException', (err) => {
+    console.error('[server] Uncaught Exception:', err);
     process.exit(1);
-  }, 5000);
-};
-
-process.on('SIGTERM', () => handleShutdown('SIGTERM'));
-process.on('SIGINT', () => handleShutdown('SIGINT'));
-
-process.on('unhandledRejection', (reason, promise) => {
-  console.error('[server] Unhandled Promise Rejection:', reason);
-});
-
-process.on('uncaughtException', (err) => {
-  console.error('[server] Uncaught Exception:', err);
-  process.exit(1);
-});
+  });
+}
 
 module.exports = app;

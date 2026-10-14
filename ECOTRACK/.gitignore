@@ -93,3 +93,7 @@ yarn-error.log*
 .gemini/
 .system_generated/
 scratch/
+
+# Vercel Deployment & Build artifacts
+.vercel/
+
