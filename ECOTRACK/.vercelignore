@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+**/node_modules
+
+# Build Outputs (built remotely on Vercel)
+dist
+**/dist
+build
+**/build
+
+# Git & System
+.git
+.github
+.gemini
+.system_generated
+scratch
+
+# Python
+requirements.txt
+__pycache__
+*.py
+*.pyc
+venv
+.venv
+env
+
+# Logs & Temp
+*.log
+.DS_Store
+Thumbs.db

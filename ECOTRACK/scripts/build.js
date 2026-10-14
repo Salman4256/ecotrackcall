@@ -5,7 +5,7 @@ const path = require('path');
 const projectRoot = path.resolve(__dirname, '..');
 
 console.log('[Build] Installing frontend dependencies...');
-execSync('npm --prefix frontend install', { cwd: projectRoot, stdio: 'inherit' });
+execSync('npm --prefix frontend install --include=dev', { cwd: projectRoot, stdio: 'inherit' });
 
 console.log('[Build] Compiling frontend with Vite...');
 execSync('npm --prefix frontend run build', { cwd: projectRoot, stdio: 'inherit' });

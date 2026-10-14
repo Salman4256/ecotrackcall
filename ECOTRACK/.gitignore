@@ -97,3 +97,6 @@ scratch/
 # Vercel Deployment & Build artifacts
 .vercel/
 
+
+.vercel
+.env*
