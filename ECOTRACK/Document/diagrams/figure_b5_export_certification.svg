@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgB5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" /><stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="certBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" /><stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="620" rx="16" fill="url(#bgB5)" stroke="#334155" stroke-width="2"/>
+  <rect x="230" y="20" width="540" height="40" rx="20" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b"/>
+  <text x="500" y="46" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#fbbf24" text-anchor="middle">FIGURE B.5: OFFICIAL ENVIRONMENTAL AUDIT CERTIFICATE</text>
+
+  <!-- Certificate Paper Mockup -->
+  <g transform="translate(160, 85)">
+    <rect width="680" height="490" rx="8" fill="url(#certBg)" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="15" y="15" width="650" height="460" rx="4" fill="none" stroke="#059669" stroke-width="2" stroke-dasharray="8,4"/>
+
+    <!-- Header -->
+    <text x="340" y="65" font-family="'Georgia', serif" font-size="24" font-weight="700" fill="#065f46" text-anchor="middle">EcoTrack Sustainability Certification</text>
+    <text x="340" y="88" font-family="'Segoe UI', sans-serif" font-size="12" fill="#475569" text-anchor="middle">Official Verified Greenhouse Gas (GHG) Audit Statement</text>
+    <line x1="220" y1="102" x2="460" y2="102" stroke="#059669" stroke-width="1.5"/>
+
+    <!-- Body text -->
+    <text x="340" y="145" font-family="'Segoe UI', sans-serif" font-size="13" fill="#334155" text-anchor="middle">This document certifies that the household carbon footprint of</text>
+    <text x="340" y="180" font-family="'Georgia', serif" font-size="22" font-weight="700" fill="#0f172a" text-anchor="middle">Raghavan S.</text>
+    <text x="340" y="210" font-family="'Segoe UI', sans-serif" font-size="13" fill="#334155" text-anchor="middle">has been audited using standardized IPCC/EPA/DEFRA emission factor protocols.</text>
+
+    <!-- Metrics box -->
+    <rect x="80" y="235" width="520" height="95" rx="6" fill="#f0fdf4" stroke="#a7f3d0"/>
+    <g transform="translate(100, 260)">
+      <text x="50" y="20" font-family="'Segoe UI', sans-serif" font-size="11" fill="#065f46">COMPUTED EMISSIONS</text>
+      <text x="50" y="48" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#065f46">430.40 kg CO₂e</text>
+
+      <text x="240" y="20" font-family="'Segoe UI', sans-serif" font-size="11" fill="#065f46">OFFICIAL ECO SCORE</text>
+      <text x="240" y="48" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#059669">78.5 / 100</text>
+
+      <text x="400" y="20" font-family="'Segoe UI', sans-serif" font-size="11" fill="#065f46">RATING TIER</text>
+      <text x="400" y="48" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#047857">Eco Conscious</text>
+    </g>
+
+    <!-- Verification Hash & Stamp -->
+    <text x="80" y="365" font-family="'Courier New', monospace" font-size="10" fill="#64748b">Verification Hash: 8f4a-9b21-ecotrack-785a-04b391c78e</text>
+    <text x="80" y="382" font-family="'Segoe UI', sans-serif" font-size="10" fill="#64748b">Audited on: 2026-10-27 | Supabase Cloud Immutable Ledger</text>
+
+    <!-- Signatures -->
+    <g transform="translate(80, 415)">
+      <line x1="0" y1="20" x2="180" y2="20" stroke="#94a3b8"/>
+      <text x="90" y="35" font-family="'Segoe UI', sans-serif" font-size="11" fill="#64748b" text-anchor="middle">Automated Verification Officer</text>
+
+      <line x1="340" y1="20" x2="520" y2="20" stroke="#94a3b8"/>
+      <text x="430" y="35" font-family="'Segoe UI', sans-serif" font-size="11" fill="#64748b" text-anchor="middle">EcoTrack Certification Engine</text>
+    </g>
+  </g>
+</svg>

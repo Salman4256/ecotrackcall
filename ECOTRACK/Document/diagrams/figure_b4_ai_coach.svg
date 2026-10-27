@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgB4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" /><stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="600" rx="16" fill="url(#bgB4)" stroke="#334155" stroke-width="2"/>
+  <rect x="240" y="20" width="520" height="40" rx="20" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6"/>
+  <text x="500" y="46" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#c084fc" text-anchor="middle">FIGURE B.4: GROQ AI ECO-COACH RECOMMENDATION INTERFACE</text>
+
+  <!-- Coach Panel -->
+  <g transform="translate(80, 85)">
+    <rect width="840" height="475" rx="12" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+
+    <!-- Header bar -->
+    <g transform="translate(30, 25)">
+      <circle cx="25" cy="25" r="22" fill="#8b5cf6" fill-opacity="0.25" stroke="#8b5cf6" stroke-width="2"/>
+      <text x="25" y="32" font-family="'Segoe UI', sans-serif" font-size="18" fill="#c084fc" text-anchor="middle">🤖</text>
+      <text x="60" y="24" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#f8fafc">Groq AI Eco-Coach (gpt-oss-120b)</text>
+      <text x="60" y="42" font-family="'Segoe UI', sans-serif" font-size="11" fill="#34d399">⚡ Fast LPU Inference • Personalized from deterministic score</text>
+    </g>
+
+    <!-- Overall Analysis Box -->
+    <rect x="30" y="85" width="780" height="65" rx="8" fill="#0f172a" stroke="#334155"/>
+    <text x="50" y="110" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#c084fc">EXECUTIVE SUMMARY</text>
+    <text x="50" y="132" font-family="'Segoe UI', sans-serif" font-size="12" fill="#cbd5e1">"Great effort Raghavan! Your score of 78.5 places you in the top 25% of energy conservers. Your highest impact comes from short-haul flights and petrol car commutes."</text>
+
+    <!-- Tip Cards Grid -->
+    <g transform="translate(30, 165)">
+      <!-- Tip 1 -->
+      <rect x="0" y="0" width="375" height="110" rx="8" fill="#0f172a" stroke="#475569"/>
+      <text x="20" y="28" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#38bdf8">✈️ Travel Optimization</text>
+      <text x="20" y="52" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• Replace 1 short domestic flight with an electrified train trip.</text>
+      <text x="20" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• Estimated Monthly Saving: ~200 kg CO₂e.</text>
+      <text x="20" y="92" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#34d399">Impact: High (Primary reduction lever)</text>
+
+      <!-- Tip 2 -->
+      <rect x="405" y="0" width="375" height="110" rx="8" fill="#0f172a" stroke="#475569"/>
+      <text x="425" y="28" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#34d399">🚗 Commute Substitution</text>
+      <text x="425" y="52" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• Carpool or switch 2 commute days to public metro transit.</text>
+      <text x="425" y="72" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• Reduces 120 km of petrol car usage per month.</text>
+      <text x="425" y="92" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#34d399">Impact: Medium-High (~23 kg CO₂e saved)</text>
+
+      <!-- Challenge Box -->
+      <rect x="0" y="125" width="780" height="85" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.2"/>
+      <text x="20" y="152" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#fbbf24">🎯 GREEN WEEKLY CHALLENGE</text>
+      <text x="20" y="174" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f8fafc">"Zero Waste Weekend: Cook all meals with fresh local produce and avoid packaged delivery to save 8.5 kg CO₂!"</text>
+      <text x="20" y="195" font-family="'Segoe UI', sans-serif" font-size="11" fill="#34d399">🏆 Earn 50 Eco-Points + 'Zero-Waste Pioneer' Badge upon completion.</text>
+    </g>
+
+    <!-- Bottom Buttons -->
+    <rect x="30" y="420" width="220" height="36" rx="6" fill="#10b981"/>
+    <text x="140" y="443" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#042f1a" text-anchor="middle">Accept Monthly Goal</text>
+
+    <rect x="270" y="420" width="220" height="36" rx="6" fill="#1e293b" stroke="#3b82f6"/>
+    <text x="380" y="443" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#60a5fa" text-anchor="middle">Ask AI Eco-Coach a Question</text>
+  </g>
+</svg>

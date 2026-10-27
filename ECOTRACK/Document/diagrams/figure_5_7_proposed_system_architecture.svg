@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 820" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1320" />
+      <stop offset="100%" stop-color="#111c30" />
+    </linearGradient>
+    <linearGradient id="tierGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+    <linearGradient id="amberGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1250" height="820" rx="16" fill="url(#bgGrad)" />
+  <rect x="2" y="2" width="1246" height="816" rx="14" fill="none" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Main Title -->
+  <rect x="360" y="20" width="530" height="46" rx="23" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-width="1.8" />
+  <text x="625" y="49" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#34d399" text-anchor="middle">FIGURE 5.7: ECOTRACK PROPOSED SYSTEM ARCHITECTURE</text>
+
+  <!-- ================= TIER 1: CLIENT PRESENTATION ================= -->
+  <g transform="translate(40, 85)">
+    <rect width="1170" height="135" rx="12" fill="url(#tierGrad)" stroke="#3b82f6" stroke-width="1.5" stroke-opacity="0.6" filter="url(#shadow)" />
+    <rect x="25" y="-12" width="260" height="24" rx="6" fill="#3b82f6" />
+    <text x="155" y="5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TIER 1: PRESENTATION &amp; CLIENT LAYER</text>
+
+    <!-- Component 1: React + Vite SPA -->
+    <rect x="30" y="30" width="260" height="85" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="50" y="58" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#60a5fa">React 18 + Vite SPA</text>
+    <text x="50" y="80" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">• React Router DOM (Guards)</text>
+    <text x="50" y="100" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">• Responsive Dark/Light UI</text>
+
+    <!-- Component 2: 7-Category Calculator UI -->
+    <rect x="315" y="30" width="270" height="85" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="335" y="58" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#34d399">7-Category Calculator UI</text>
+    <text x="335" y="80" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">• Transport, Energy, Water, Diet</text>
+    <text x="335" y="100" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">• Waste, Shopping, Travel inputs</text>
+
+    <!-- Component 3: Chart.js Visualizations -->
+    <rect x="610" y="30" width="260" height="85" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="630" y="58" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#fbbf24">Chart.js Analytics Engine</text>
+    <text x="630" y="80" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">• Doughnut breakdown charts</text>
+    <text x="630" y="100" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">• Historical monthly trends</text>
+
+    <!-- Component 4: Supabase Client SDK -->
+    <rect x="895" y="30" width="245" height="85" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="915" y="58" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#a78bfa">Supabase Client SDK</text>
+    <text x="915" y="80" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">• JWT session management</text>
+    <text x="915" y="100" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">• Bearer token injection</text>
+  </g>
+
+  <!-- Flow Arrow: Tier 1 to Tier 2 -->
+  <g transform="translate(625, 220)">
+    <path d="M 0 0 L 0 35" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+    <polygon points="0,42 -6,30 6,30" fill="#38bdf8" />
+    <text x="15" y="24" font-family="'Segoe UI', sans-serif" font-size="11" fill="#7dd3fc">HTTPS / REST API (JWT Bearer Auth)</text>
+  </g>
+
+  <!-- ================= TIER 2: API GATEWAY & SECURITY ================= -->
+  <g transform="translate(40, 265)">
+    <rect width="1170" height="120" rx="12" fill="url(#tierGrad)" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.6" filter="url(#shadow)" />
+    <rect x="25" y="-12" width="280" height="24" rx="6" fill="#10b981" />
+    <text x="165" y="5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TIER 2: SECURE API GATEWAY (NODE / EXPRESS)</text>
+
+    <!-- Middleware 1: Helmet & CORS -->
+    <rect x="30" y="25" width="260" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="50" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#34d399">Helmet &amp; CORS Security</text>
+    <text x="50" y="73" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">CSP headers, frameguard, safe origins</text>
+
+    <!-- Middleware 2: Rate Limiting & Sanitation -->
+    <rect x="315" y="25" width="270" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="335" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#34d399">Rate Limiter &amp; Input Guard</text>
+    <text x="335" y="73" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">DDoS mitigation &amp; numerical bounds</text>
+
+    <!-- Middleware 3: Auth & Admin Guard -->
+    <rect x="610" y="25" width="260" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="630" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#34d399">Auth &amp; Admin Middleware</text>
+    <text x="630" y="73" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Cryptographic JWT token validation</text>
+
+    <!-- Middleware 4: Unified Error Handling -->
+    <rect x="895" y="25" width="245" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="915" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#34d399">Unified Error Handler</text>
+    <text x="915" y="73" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Standardized JSON API error schema</text>
+  </g>
+
+  <!-- Flow Arrow: Tier 2 to Tier 3 -->
+  <g transform="translate(625, 385)">
+    <path d="M 0 0 L 0 35" stroke="#34d399" stroke-width="3" stroke-linecap="round" />
+    <polygon points="0,42 -6,30 6,30" fill="#34d399" />
+    <text x="15" y="24" font-family="'Segoe UI', sans-serif" font-size="11" fill="#86efac">Internal Controller Dispatch</text>
+  </g>
+
+  <!-- ================= TIER 3: BUSINESS LOGIC & INTELLIGENCE ================= -->
+  <g transform="translate(40, 430)">
+    <rect width="1170" height="185" rx="12" fill="url(#tierGrad)" stroke="#8b5cf6" stroke-width="1.5" stroke-opacity="0.6" filter="url(#shadow)" />
+    <rect x="25" y="-12" width="310" height="24" rx="6" fill="#8b5cf6" />
+    <text x="180" y="5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TIER 3: BUSINESS LOGIC &amp; AI INTELLIGENCE SERVICES</text>
+
+    <!-- Service 1: Deterministic Calculation Engine -->
+    <rect x="30" y="25" width="270" height="145" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="50" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#c084fc">Deterministic Engine</text>
+    <text x="50" y="75" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• 100% Deterministic Math</text>
+    <text x="50" y="95" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• 7 Emission Categories</text>
+    <text x="50" y="115" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Eco Score Algorithm (0-100)</text>
+    <text x="50" y="135" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Sub-5ms calculation latency</text>
+
+    <!-- Service 2: Emission Factor Service -->
+    <rect x="320" y="25" width="265" height="145" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="340" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#c084fc">Emission Factor Service</text>
+    <text x="340" y="75" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• IPCC 2019 Refinement</text>
+    <text x="340" y="95" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• US EPA 2023 Constants</text>
+    <text x="340" y="115" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• UK DEFRA / DESNZ Factors</text>
+    <text x="340" y="135" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Authoritative non-AI values</text>
+
+    <!-- Service 3: Groq AI Recommendation Engine -->
+    <rect x="605" y="25" width="270" height="145" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="625" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#c084fc">Groq AI Eco-Coach</text>
+    <text x="625" y="75" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Model: gpt-oss-120b</text>
+    <text x="625" y="95" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Strict JSON Prompt Schema</text>
+    <text x="625" y="115" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Actionable Reduction Tips</text>
+    <text x="625" y="135" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Green Weekly Challenges</text>
+
+    <!-- Service 4: PDF & Export Service -->
+    <rect x="895" y="25" width="245" height="145" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="915" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#c084fc">PDFKit &amp; Export Service</text>
+    <text x="915" y="75" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Official Audit Certificates</text>
+    <text x="915" y="95" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Dynamic Vector Graphics</text>
+    <text x="915" y="115" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• CSV Stringify for raw logs</text>
+    <text x="915" y="135" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• High-speed stream delivery</text>
+  </g>
+
+  <!-- Flow Arrow: Tier 3 to Tier 4 -->
+  <g transform="translate(625, 615)">
+    <path d="M 0 0 L 0 35" stroke="#c084fc" stroke-width="3" stroke-linecap="round" />
+    <polygon points="0,42 -6,30 6,30" fill="#c084fc" />
+    <text x="15" y="24" font-family="'Segoe UI', sans-serif" font-size="11" fill="#d8b4fe">PostgreSQL Pool / SDK Calls</text>
+  </g>
+
+  <!-- ================= TIER 4: CLOUD DATA & STORAGE ================= -->
+  <g transform="translate(40, 660)">
+    <rect width="1170" height="135" rx="12" fill="url(#tierGrad)" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.6" filter="url(#shadow)" />
+    <rect x="25" y="-12" width="270" height="24" rx="6" fill="#f59e0b" />
+    <text x="160" y="5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TIER 4: SUPABASE CLOUD &amp; DATA LAYER</text>
+
+    <!-- Subsystem 1: PostgreSQL Relational DB -->
+    <rect x="30" y="25" width="260" height="95" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="50" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#fbbf24">PostgreSQL Relational DB</text>
+    <text x="50" y="73" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• Profiles &amp; roles tables</text>
+    <text x="50" y="93" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• Carbon_calculations &amp; logs</text>
+
+    <!-- Subsystem 2: Row Level Security (RLS) -->
+    <rect x="315" y="25" width="270" height="95" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="335" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#fbbf24">Row Level Security (RLS)</text>
+    <text x="335" y="73" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• Granular SQL tenant isolation</text>
+    <text x="335" y="93" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• auth.uid() owner enforcement</text>
+
+    <!-- Subsystem 3: Supabase Auth & Storage -->
+    <rect x="610" y="25" width="260" height="95" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="630" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#fbbf24">Auth &amp; Cloud Storage</text>
+    <text x="630" y="73" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• Secure JWT issuance &amp; refresh</text>
+    <text x="630" y="93" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• Avatars &amp; screenshot buckets</text>
+
+    <!-- Subsystem 4: External Groq API Service -->
+    <rect x="895" y="25" width="245" height="95" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="915" y="52" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#fbbf24">Groq Cloud Inference</text>
+    <text x="915" y="73" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• High-throughput LPU hardware</text>
+    <text x="915" y="93" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">• Ultra-low token latency</text>
+  </g>
+</svg>

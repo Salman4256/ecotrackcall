@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="stepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="480" rx="16" fill="url(#bgGrad)" />
+  <rect x="2" y="2" width="1196" height="476" rx="14" fill="none" stroke="#334155" stroke-width="2" />
+
+  <!-- Title Badge -->
+  <rect x="370" y="25" width="460" height="44" rx="22" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.8" />
+  <text x="600" y="53" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#60a5fa" text-anchor="middle">FIGURE 5.1: END-TO-END DATA PROCESSING PIPELINE</text>
+
+  <!-- 5 Horizontal Steps -->
+  <!-- Step 1: Input Ingestion -->
+  <g transform="translate(40, 110)">
+    <rect width="200" height="300" rx="10" fill="url(#stepGrad)" stroke="#38bdf8" stroke-width="1.5" filter="url(#shadow)" />
+    <circle cx="100" cy="45" r="22" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-width="2" />
+    <text x="100" y="52" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#38bdf8" text-anchor="middle">01</text>
+    <text x="100" y="95" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#f8fafc" text-anchor="middle">Data Ingestion</text>
+    <text x="100" y="125" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• 7 Category Inputs</text>
+    <text x="100" y="150" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Km, kWh, Litres, Diet</text>
+    <text x="100" y="175" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Numerical clamping</text>
+    <text x="100" y="200" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Express validator</text>
+    <rect x="25" y="245" width="150" height="30" rx="6" fill="#38bdf8" fill-opacity="0.15" />
+    <text x="100" y="265" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="middle">Sanitized Payload</text>
+  </g>
+
+  <!-- Arrow 1-2 -->
+  <path d="M 245 260 L 275 260" stroke="#38bdf8" stroke-width="3" fill="none" />
+  <polygon points="280,260 270,254 270,266" fill="#38bdf8" />
+
+  <!-- Step 2: Deterministic Engine -->
+  <g transform="translate(285, 110)">
+    <rect width="200" height="300" rx="10" fill="url(#stepGrad)" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)" />
+    <circle cx="100" cy="45" r="22" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="2" />
+    <text x="100" y="52" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#10b981" text-anchor="middle">02</text>
+    <text x="100" y="95" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#f8fafc" text-anchor="middle">Calc Engine</text>
+    <text x="100" y="125" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• IPCC / EPA factors</text>
+    <text x="100" y="150" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• 7 Category emissions</text>
+    <text x="100" y="175" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Total kg CO₂e sum</text>
+    <text x="100" y="200" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Eco Score (0-100)</text>
+    <rect x="25" y="245" width="150" height="30" rx="6" fill="#10b981" fill-opacity="0.15" />
+    <text x="100" y="265" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#34d399" text-anchor="middle">Deterministic Stats</text>
+  </g>
+
+  <!-- Arrow 2-3 -->
+  <path d="M 490 260 L 520 260" stroke="#10b981" stroke-width="3" fill="none" />
+  <polygon points="525,260 515,254 515,266" fill="#10b981" />
+
+  <!-- Step 3: Groq AI Synthesis -->
+  <g transform="translate(530, 110)">
+    <rect width="200" height="300" rx="10" fill="url(#stepGrad)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#shadow)" />
+    <circle cx="100" cy="45" r="22" fill="#8b5cf6" fill-opacity="0.2" stroke="#8b5cf6" stroke-width="2" />
+    <text x="100" y="52" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#8b5cf6" text-anchor="middle">03</text>
+    <text x="100" y="95" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#f8fafc" text-anchor="middle">Groq AI Inference</text>
+    <text x="100" y="125" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• gpt-oss-120b LPU</text>
+    <text x="100" y="150" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Category sorting</text>
+    <text x="100" y="175" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Strict JSON schema</text>
+    <text x="100" y="200" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Actionable eco-tips</text>
+    <rect x="25" y="245" width="150" height="30" rx="6" fill="#8b5cf6" fill-opacity="0.15" />
+    <text x="100" y="265" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#c084fc" text-anchor="middle">AI Recommendation</text>
+  </g>
+
+  <!-- Arrow 3-4 -->
+  <path d="M 735 260 L 765 260" stroke="#8b5cf6" stroke-width="3" fill="none" />
+  <polygon points="770,260 760,254 760,266" fill="#8b5cf6" />
+
+  <!-- Step 4: Supabase Persistence & RLS -->
+  <g transform="translate(775, 110)">
+    <rect width="200" height="300" rx="10" fill="url(#stepGrad)" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)" />
+    <circle cx="100" cy="45" r="22" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="2" />
+    <text x="100" y="52" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#f59e0b" text-anchor="middle">04</text>
+    <text x="100" y="95" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#f8fafc" text-anchor="middle">Data Persistence</text>
+    <text x="100" y="125" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Supabase PostgreSQL</text>
+    <text x="100" y="150" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Row-Level Security</text>
+    <text x="100" y="175" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Historical log update</text>
+    <text x="100" y="200" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Time-series snapshot</text>
+    <rect x="25" y="245" width="150" height="30" rx="6" fill="#f59e0b" fill-opacity="0.15" />
+    <text x="100" y="265" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#fbbf24" text-anchor="middle">Secure Audit Record</text>
+  </g>
+
+  <!-- Arrow 4-5 -->
+  <path d="M 980 260 L 1010 260" stroke="#f59e0b" stroke-width="3" fill="none" />
+  <polygon points="1015,260 1005,254 1005,266" fill="#f59e0b" />
+
+  <!-- Step 5: Visualization & Export -->
+  <g transform="translate(1020, 110)">
+    <rect width="140" height="300" rx="10" fill="url(#stepGrad)" stroke="#ec4899" stroke-width="1.5" filter="url(#shadow)" />
+    <circle cx="70" cy="45" r="22" fill="#ec4899" fill-opacity="0.2" stroke="#ec4899" stroke-width="2" />
+    <text x="70" y="52" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#ec4899" text-anchor="middle">05</text>
+    <text x="70" y="95" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#f8fafc" text-anchor="middle">Presentation</text>
+    <text x="70" y="125" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">• Chart.js UI</text>
+    <text x="70" y="150" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">• PDF Export</text>
+    <text x="70" y="175" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">• Certificate</text>
+    <text x="70" y="200" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">• CSV Log</text>
+    <rect x="15" y="245" width="110" height="30" rx="6" fill="#ec4899" fill-opacity="0.15" />
+    <text x="70" y="265" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#f472b6" text-anchor="middle">Verified Output</text>
+  </g>
+</svg>

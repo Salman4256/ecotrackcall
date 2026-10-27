@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#334155" stop-opacity="0.7" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="650" rx="16" fill="url(#bgGrad)" />
+  <rect x="2" y="2" width="1096" height="646" rx="14" fill="none" stroke="#334155" stroke-width="2" />
+
+  <!-- Title Badge -->
+  <rect x="350" y="30" width="400" height="44" rx="22" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1.5" />
+  <text x="550" y="58" font-family="'Segoe UI', Roboto, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#f87171" text-anchor="middle">FIGURE 3.1: EXISTING CONVENTIONAL CARBON SYSTEM</text>
+
+  <!-- User / Input Stage -->
+  <g transform="translate(60, 110)">
+    <rect width="260" height="200" rx="12" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.5" filter="url(#shadow)" />
+    <circle cx="130" cy="50" r="28" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="2" />
+    <text x="130" y="57" font-family="'Segoe UI', sans-serif" font-size="22" fill="#60a5fa" text-anchor="middle">👤</text>
+    <text x="130" y="105" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#f8fafc" text-anchor="middle">Manual User Estimation</text>
+    <text x="130" y="130" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Guesswork on commute miles</text>
+    <text x="130" y="150" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Unorganized utility bills</text>
+    <text x="130" y="170" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• No category breakdown</text>
+    <rect x="50" y="215" width="160" height="26" rx="6" fill="#ef4444" fill-opacity="0.2" />
+    <text x="130" y="233" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f87171" text-anchor="middle">High Human Error Rate</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 320 210 L 410 210" stroke="#f87171" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+  <polygon points="415,210 405,204 405,216" fill="#f87171" />
+  <text x="368" y="195" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Ad-hoc Data</text>
+
+  <!-- Processing Stage -->
+  <g transform="translate(420, 110)">
+    <rect width="280" height="200" rx="12" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.5" filter="url(#shadow)" />
+    <circle cx="140" cy="50" r="28" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="2" />
+    <text x="140" y="57" font-family="'Segoe UI', sans-serif" font-size="22" fill="#fbbf24" text-anchor="middle">📄</text>
+    <text x="140" y="105" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#f8fafc" text-anchor="middle">Spreadsheets &amp; Static Forms</text>
+    <text x="140" y="130" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Outdated conversion tables</text>
+    <text x="140" y="150" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Static generic coefficients</text>
+    <text x="140" y="170" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Disconnected isolated files</text>
+    <rect x="50" y="215" width="180" height="26" rx="6" fill="#f59e0b" fill-opacity="0.2" />
+    <text x="140" y="233" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#fbbf24" text-anchor="middle">Zero AI / Inflexible Logic</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 700 210 L 780 210" stroke="#f87171" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+  <polygon points="785,210 775,204 775,216" fill="#f87171" />
+  <text x="742" y="195" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Raw Result</text>
+
+  <!-- Output Stage -->
+  <g transform="translate(790, 110)">
+    <rect width="250" height="200" rx="12" fill="url(#cardGrad)" stroke="#475569" stroke-width="1.5" filter="url(#shadow)" />
+    <circle cx="125" cy="50" r="28" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="2" />
+    <text x="125" y="57" font-family="'Segoe UI', sans-serif" font-size="22" fill="#f87171" text-anchor="middle">📉</text>
+    <text x="125" y="105" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#f8fafc" text-anchor="middle">Unverified Outputs</text>
+    <text x="125" y="130" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Single total kg CO₂ value</text>
+    <text x="125" y="150" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• Generic non-actionable tips</text>
+    <text x="125" y="170" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">• No historical trend charts</text>
+    <rect x="40" y="215" width="170" height="26" rx="6" fill="#ef4444" fill-opacity="0.2" />
+    <text x="125" y="233" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f87171" text-anchor="middle">No Behavioral Change</text>
+  </g>
+
+  <!-- Bottom Disadvantages Container -->
+  <g transform="translate(60, 380)">
+    <rect width="980" height="230" rx="12" fill="#0f172a" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.7" filter="url(#shadow)" />
+    <rect x="25" y="-14" width="220" height="28" rx="6" fill="#ef4444" />
+    <text x="135" y="5" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">KEY FLAWS IDENTIFIED</text>
+
+    <!-- Disadvantage Grid -->
+    <g transform="translate(35, 35)">
+      <!-- Item 1 -->
+      <rect x="0" y="0" width="430" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="20" y="28" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#f87171">1. High Inaccuracy &amp; Subjective Bias</text>
+      <text x="20" y="50" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">Relies on manual inputs and unverified constants (+/- 45% variance across tools).</text>
+
+      <!-- Item 2 -->
+      <rect x="475" y="0" width="430" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="495" y="28" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#f87171">2. Lack of Granular Categories</text>
+      <text x="495" y="50" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">Omits critical lifestyle factors: food diets, consumer shopping, waste recycling.</text>
+
+      <!-- Item 3 -->
+      <rect x="0" y="95" width="430" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="20" y="123" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#f87171">3. Generic, Non-Actionable Advice</text>
+      <text x="20" y="145" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">Static suggestions ("turn off lights") without individualized priority or ROI.</text>
+
+      <!-- Item 4 -->
+      <rect x="475" y="95" width="430" height="75" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="495" y="123" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#f87171">4. No Data Persistence &amp; Auditing</text>
+      <text x="495" y="145" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">Zero session tracking, no verified carbon audit logs, and no historical progress.</text>
+    </g>
+  </g>
+</svg>

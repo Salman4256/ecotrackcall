@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgB2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" /><stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="620" rx="16" fill="url(#bgB2)" stroke="#334155" stroke-width="2"/>
+  <rect x="230" y="20" width="540" height="40" rx="20" fill="#10b981" fill-opacity="0.15" stroke="#10b981"/>
+  <text x="500" y="46" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#34d399" text-anchor="middle">FIGURE B.2: 7-CATEGORY CARBON FOOTPRINT CALCULATOR</text>
+
+  <!-- Left Form Grid -->
+  <g transform="translate(50, 80)">
+    <rect width="520" height="500" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <text x="30" y="40" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="700" fill="#f8fafc">Monthly Carbon Activity Audit</text>
+
+    <!-- Field 1: Transport -->
+    <text x="30" y="80" font-family="'Segoe UI', sans-serif" font-size="13" fill="#cbd5e1">1. Transportation Mode &amp; Distance</text>
+    <rect x="30" y="90" width="220" height="36" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="45" y="113" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">Petrol Car (0.192 kg/km)</text>
+    <rect x="270" y="90" width="220" height="36" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="285" y="113" font-family="'Segoe UI', sans-serif" font-size="12" fill="#34d399">450 km / month</text>
+
+    <!-- Field 2: Electricity -->
+    <text x="30" y="155" font-family="'Segoe UI', sans-serif" font-size="13" fill="#cbd5e1">2. Electricity &amp; Renewable Share</text>
+    <rect x="30" y="165" width="220" height="36" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="45" y="188" font-family="'Segoe UI', sans-serif" font-size="12" fill="#34d399">210 kWh / month</text>
+    <rect x="270" y="165" width="220" height="36" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="285" y="188" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">15% Rooftop Solar</text>
+
+    <!-- Field 3: Food / Diet -->
+    <text x="30" y="230" font-family="'Segoe UI', sans-serif" font-size="13" fill="#cbd5e1">3. Food &amp; Dietary Pattern</text>
+    <rect x="30" y="240" width="460" height="36" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="45" y="263" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">Vegetarian Diet (1.70 kg CO₂e / day)</text>
+
+    <!-- Field 4: Waste & Recycling -->
+    <text x="30" y="305" font-family="'Segoe UI', sans-serif" font-size="13" fill="#cbd5e1">4. Municipal Waste &amp; Recycling %</text>
+    <rect x="30" y="315" width="220" height="36" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="45" y="338" font-family="'Segoe UI', sans-serif" font-size="12" fill="#34d399">35 kg / month</text>
+    <rect x="270" y="315" width="220" height="36" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="285" y="338" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">40% Recycled / Composted</text>
+
+    <!-- Field 5: Shopping & Travel -->
+    <text x="30" y="380" font-family="'Segoe UI', sans-serif" font-size="13" fill="#cbd5e1">5. Shopping Goods &amp; Flights</text>
+    <rect x="30" y="390" width="220" height="36" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="45" y="413" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">2 Clothes, 0 Electronics</text>
+    <rect x="270" y="390" width="220" height="36" rx="6" fill="#0f172a" stroke="#475569"/>
+    <text x="285" y="413" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">1 Domestic Flight (250 kg)</text>
+
+    <!-- Action Button -->
+    <rect x="30" y="445" width="460" height="40" rx="8" fill="#10b981"/>
+    <text x="260" y="470" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#042f1a" text-anchor="middle">⚡ Compute Deterministic Emissions &amp; Generate AI Plan</text>
+  </g>
+
+  <!-- Right Summary Card -->
+  <g transform="translate(600, 80)">
+    <rect width="350" height="500" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="175" y="40" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="700" fill="#f8fafc" text-anchor="middle">Live Calculation Result</text>
+
+    <!-- Eco Score Circle -->
+    <circle cx="175" cy="130" r="60" fill="#0f172a" stroke="#10b981" stroke-width="8"/>
+    <text x="175" y="125" font-family="'Segoe UI', sans-serif" font-size="28" font-weight="800" fill="#34d399" text-anchor="middle">78.5</text>
+    <text x="175" y="148" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">ECO SCORE / 100</text>
+
+    <rect x="60" y="205" width="230" height="32" rx="16" fill="#10b981" fill-opacity="0.2"/>
+    <text x="175" y="226" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">Tier: Eco Conscious</text>
+
+    <!-- Total CO2 -->
+    <rect x="40" y="255" width="270" height="65" rx="8" fill="#0f172a" stroke="#334155"/>
+    <text x="175" y="280" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">TOTAL MONTHLY EMISSIONS</text>
+    <text x="175" y="306" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">430.40 kg CO₂e</text>
+
+    <!-- Category Breakdown Mini Table -->
+    <g transform="translate(45, 335)">
+      <text x="0" y="18" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Travel (Flights):</text>
+      <text x="250" y="18" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#f87171" text-anchor="end">250.00 kg</text>
+
+      <text x="0" y="40" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Transportation:</text>
+      <text x="250" y="40" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="end">86.40 kg</text>
+
+      <text x="0" y="62" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Electricity (Grid):</text>
+      <text x="250" y="62" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#60a5fa" text-anchor="end">84.79 kg</text>
+
+      <text x="0" y="84" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cbd5e1">• Diet &amp; Waste:</text>
+      <text x="250" y="84" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#34d399" text-anchor="end">63.20 kg</text>
+    </g>
+
+    <rect x="40" y="445" width="270" height="34" rx="6" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6"/>
+    <text x="175" y="467" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#60a5fa" text-anchor="middle">📥 Export Audit Report (PDF)</text>
+  </g>
+</svg>
