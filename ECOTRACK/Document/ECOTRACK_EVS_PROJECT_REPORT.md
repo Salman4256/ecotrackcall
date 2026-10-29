@@ -5,7 +5,67 @@
 
 ---
 
+# ABSTRACT
+
+Anthropogenic greenhouse gas (GHG) emissions originating from domestic and personal activities—spanning residential electricity consumption, vehicular transit, aviation, dietary patterns, municipal solid waste management, domestic water utilization, and consumer shopping—account for over 70% of global climate-forcing emissions. Despite accelerating public environmental awareness, a pronounced "intention-action gap" persists among citizens, students, and organizations. This inertia is exacerbated by conventional carbon calculators that suffer from subjective estimation guesswork, algorithmic discrepancies exceeding 45%, systematic omission of indirect lifecycle consumption categories, and generic, unmotivating feedback.
+
+This project introduces **EcoTrack**, an intelligent, full-stack, enterprise-grade environmental sustainability and behavioral advisory platform developed at the intersection of Environmental Studies (EVS) and Computer Science Engineering. EcoTrack resolves calculation variances through a mathematically rigorous dual-engine architecture that decouples deterministic accounting from natural language advisory:
+1. **Deterministic Calculation Engine**: Implements Tier 1 greenhouse gas accounting methodologies adhering strictly to international standards established by the **Intergovernmental Panel on Climate Change (IPCC)**, the **United States Environmental Protection Agency (US EPA)**, the **UK Department for Environment, Food and Rural Affairs (DEFRA)**, and the **WRI Greenhouse Gas Protocol**. It computes individual carbon footprints across seven granular lifecycle sectors, generates an empirical 0–100 Eco Score, and classifies users into four behavioral tiers (*Eco Champion*, *Eco Conscious*, *Needs Improvement*, and *High Carbon Impact*).
+2. **Groq AI Eco-Coach**: An ultra-high-speed generative advisory engine powered by Groq's Language Processing Unit (LPU) cloud inference running the `openai/gpt-oss-120b` model. By ingesting pre-computed, deterministic emissions payloads, the AI agent synthesizes customized, high-ROI decarbonization roadmaps, context-sensitive behavioral nudges, and gamified green challenges while completely eliminating mathematical hallucination.
+
+The software platform is implemented as a modern Single Page Application (SPA) leveraging React 18, Vite, Bootstrap 5, and Chart.js, served by a resilient Node.js and Express.js REST API gateway fortified with Helmet security headers, CORS policies, and IP rate limiting. Longitudinal tracking, historical audit logs, and user authentication are managed via Supabase PostgreSQL protected by cryptographic JSON Web Tokens (JWT) and database-level Row-Level Security (RLS) policies. In addition, an automated server-side PDFKit service issues official, tamper-evident Environmental Audit Certificates with verifiable cryptographic verification signatures. Comprehensive system evaluation demonstrates sub-500ms calculation response times, 1.2-second AI recommendation generation latency, a System Usability Scale (SUS) score of 89.2, and estimated personal carbon mitigation potential ranging from 15% to 25%. EcoTrack provides an authoritative, extensible, and verifiable template for environmental education curricula, campus auditing, and individual climate stewardship.
+
+---
+
+### KEYWORDS
+**Carbon Footprint Accounting**, **Greenhouse Gas (GHG) Protocol**, **IPCC Tier 1 Guidelines**, **Environmental Studies (EVS)**, **Deterministic Computation**, **Generative Artificial Intelligence (AI)**, **Groq LPU Acceleration**, **Eco Score Metric**, **Behavioral Eco-Feedback**, **Life Cycle Assessment (LCA)**, **Row-Level Security (RLS)**, **Sustainable Software Engineering**.
+
+---
+
+# LIST OF ABBREVIATIONS
+
+| Abbreviation | Expansion / Full Form | Domain Context |
+| :--- | :--- | :--- |
+| **AI** | Artificial Intelligence | Machine learning, generative language models, and automated advisory systems |
+| **API** | Application Programming Interface | Set of protocols and tools for building software and communicating between tiers |
+| **CORS** | Cross-Origin Resource Sharing | Browser security mechanism controlling cross-origin HTTP requests |
+| **DEFRA** | Department for Environment, Food and Rural Affairs (UK) | Authoritative publisher of official annual carbon conversion factors |
+| **DESNZ** | Department for Energy Security and Net Zero (UK) | UK governmental body managing national energy transformation and GHG inventories |
+| **EPA / US EPA** | United States Environmental Protection Agency | Federal environmental regulatory agency publishing municipal emissions coefficients |
+| **EV** | Electric Vehicle | Battery-electric passenger transportation with zero direct tailpipe emissions |
+| **EVS** | Environmental Studies / Environmental Science | Academic field examining human-environment interactions and sustainability |
+| **GHG** | Greenhouse Gas | Atmospheric gases causing radiative forcing ($\text{CO}_2$, $\text{CH}_4$, $\text{N}_2\text{O}$, fluorinated gases) |
+| **GWP / $\text{GWP}_{100}$** | Global Warming Potential (100-Year Horizon) | Metric quantifying heat absorption of a gas relative to carbon dioxide over 100 years |
+| **HCI** | Human-Computer Interaction | Study and design of user interfaces and computational interaction dynamics |
+| **HTTP / HTTPS** | Hypertext Transfer Protocol (Secure) | Application-layer communication protocol encrypted via TLS |
+| **IPCC** | Intergovernmental Panel on Climate Change | United Nations scientific body publishing global carbon inventory frameworks |
+| **JSON** | JavaScript Object Notation | Lightweight text-based format for structured data serialization and API interchange |
+| **JWT** | JSON Web Token | Open cryptographic standard (RFC 7519) for transmitting secure claims |
+| **$\text{kg CO}_2\text{e}$** | Kilograms of Carbon Dioxide Equivalent | Standardized scientific unit for aggregating greenhouse gas warming potentials |
+| **kWh** | Kilowatt-hour | Standard unit of electrical energy measurement ($1\text{ kWh} = 3.6 \times 10^6\text{ J}$) |
+| **LCA** | Life Cycle Assessment | Systematic methodology evaluating environmental impacts across all lifecycle phases |
+| **LLM** | Large Language Model | Deep transformer neural networks trained on extensive text datasets |
+| **LPU** | Language Processing Unit | Deterministic tensor processor architecture engineered by Groq for ultra-low latency |
+| **NGO** | Non-Governmental Organization | Non-profit civic entity working toward environmental conservation and social goals |
+| **PDF** | Portable Document Format | Universal digital document standard used for formal certification exports |
+| **REST** | Representational State Transfer | Software architecture standard utilizing stateless, caching client-server endpoints |
+| **RLS** | Row-Level Security | Relational database access control mechanism isolating data rows per user ID |
+| **ROI** | Return on Investment | Efficiency metric measuring carbon reduction yield relative to behavioral disruption |
+| **SPA** | Single Page Application | Dynamic web application architecture that updates data without reloading the browser |
+| **SQL** | Structured Query Language | Standardized programming language for relational database query operations |
+| **SUS** | System Usability Scale | Standardized 10-item psychometric industry scale measuring software usability |
+| **$\text{t CO}_2\text{e}$** | Metric Tonnes of Carbon Dioxide Equivalent | Metric unit representing $1,000\text{ kilograms}$ of $\text{CO}_2$ equivalent emissions |
+| **UI / UX** | User Interface / User Experience | Visual graphical presentation and holistic user operational workflow design |
+| **UNEP** | United Nations Environment Programme | Global authority assessing climate gaps, environmental treaties, and sustainability |
+| **Vite** | Vite Frontend Tooling | Modern, ESM-native frontend build and development server tool |
+| **WBCSD** | World Business Council for Sustainable Development | Global coalition of businesses driving corporate GHG measurement protocols |
+| **WRI** | World Resources Institute | Global research organization authoring the standardized Greenhouse Gas Protocol |
+
+---
+
 ## TABLE OF CONTENTS
+- [ABSTRACT](#abstract)
+- [LIST OF ABBREVIATIONS](#list-of-abbreviations)
 1. [CHAPTER 1: INTRODUCTION](#chapter-1-introduction)
    - 1.1 Description
    - 1.2 Problem Statement
@@ -50,7 +110,7 @@
     - 10.2 Future Enhancements
 11. [APPENDIX – A: SOURCE CODE](#appendix--a-source-code)
 12. [APPENDIX – B: SCREENSHOTS & SYSTEM VISUALS](#appendix--b-screenshots--system-visuals) (Figures B.1 to B.5)
-13. [REFERENCES](#references) (15 Formal Citations)
+13. [REFERENCES](#references) (20 Formal Citations)
 
 ---
 
@@ -526,3 +586,8 @@ module.exports = { computeEmissions };
 13. **Supabase Inc. (2024).** *The Open Source Firebase Alternative: PostgreSQL Row-Level Security, Realtime Engines, and Authentication Architecture*. San Francisco, CA.
 14. **United States Environmental Protection Agency (US EPA). (2023).** *GHG Emission Factors for Greenhouse Gas Inventories*. Washington, DC: Center for Corporate Climate Leadership.
 15. **Wiedmann, T., & Minx, J. (2008).** A definition of 'carbon footprint'. *Ecological Economics Research Trends*, 1, 1–11.
+16. **Hamari, J., Koivisto, J., & Sarsa, H. (2014).** Does gamification work? — A literature review of empirical studies on gamification. In *Proceedings of the 47th Hawaii International Conference on System Sciences (HICSS)* (pp. 3025–3034). IEEE.
+17. **Lee, D. S., Fahey, D. W., Skowron, A., Allen, M. R., Burkhardt, U., Chen, Q., ... & Wilcox, L. J. (2021).** The contribution of global aviation to anthropogenic climate forcing for 2000 to 2018. *Atmospheric Environment*, 244, 117834.
+18. **Poore, J., & Nemecek, T. (2018).** Reducing food’s environmental impacts through producers and consumers. *Science*, 360(6392), 987–992.
+19. **United Nations Environment Programme (UNEP). (2023).** *Emissions Gap Report 2023: Broken Record – Temperatures hit new highs, yet world fails to cut emissions (again)*. Nairobi: UNEP.
+20. **World Resources Institute (WRI) & World Business Council for Sustainable Development (WBCSD). (2015).** *The Greenhouse Gas Protocol: A Corporate Accounting and Reporting Standard (Scope 2 Guidance)*. Washington, DC: WRI/WBCSD.
